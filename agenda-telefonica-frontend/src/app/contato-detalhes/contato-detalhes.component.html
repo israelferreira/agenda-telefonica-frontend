@@ -1,0 +1,24 @@
+<h2>Detalhes do Contato</h2>
+
+<hr/>
+<div *ngIf="contato">
+  <div>
+    <label><b>Nome: </b></label> {{contato.nome}}
+  </div>
+  <div>
+    <label><b>Telefone: </b></label> {{contato.telefone}}
+  </div>
+  <div>
+    <label><b>Email: </b></label> {{contato.email}}
+  </div>
+  <div>
+    <label><b>Data de nascimento: </b></label> {{contato.dataNascimento | date:'dd/MM/yyyy'}}
+  </div>
+  <div>
+    <label><b>Informações Extras: </b></label> {{contato.informacoesExtras}}
+  </div>
+</div>
+
+<br />
+<br />
+<button (click)="list()" class="btn btn-primary">Voltar para a lista de contatos</button><br />

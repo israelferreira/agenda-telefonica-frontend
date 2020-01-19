@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Lista de Contatos</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>Email</th>
+          <th>Data de nascimento</th>
+          <th>Informações Extras</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contato of contatos | async">
+          <td>{{contato.nome}}</td>
+          <td>{{contato.telefone}}</td>
+          <td>{{contato.email}}</td>
+          <td>{{contato.dataNascimento | date:'dd/MM/yyyy'}}</td>         
+          <td>{{contato.informacoesExtras}}</td>
+          <td><button (click)="deletarContato(contato.id)" class="btn btn-danger">Deletar</button>
+              <button (click)="atualizarContato(contato.id)" class="btn btn-info" style="margin-left: 10px">Editar</button>
+              <button (click)="contatoDetalhes(contato.id)" class="btn btn-secondary" style="margin-left: 10px">Detalhes</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

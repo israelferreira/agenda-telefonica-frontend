@@ -1,0 +1,32 @@
+<h3>Criar Contato</h3>
+<div [hidden]="enviado" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" [(ngModel)]="contato.nome" name="nome">
+    </div>
+
+    <div class="form-group">
+      <label for="telefone">Telefone</label>
+      <input type="text" [textMask]="{mask: mascaraTelefone}" class="form-control" placeholder="(61) 99123-4567" [(ngModel)]="contato.telefone" name="telefone">      
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" [(ngModel)]="contato.email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label for="dataNascimento">Data de nascimento</label>
+      <input type="date" class="form-control" id="dataNascimento" [(ngModel)]="contato.dataNascimento" name="dataNascimento">
+    </div>
+
+    <div class="form-group">
+      <label for="informacoesExtras">Informações Extras</label>
+      <textarea class="form-control" rows="5" cols="10" maxlength="500"
+        id="informacoesExtras" required [(ngModel)]="contato.informacoesExtras" name="informacoesExtras"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Enviar</button>
+  </form>
+</div>
