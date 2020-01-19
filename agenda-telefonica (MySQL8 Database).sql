@@ -8,8 +8,8 @@ CREATE TABLE `contato` (
 	`id` BIGINT NOT NULL AUTO_INCREMENT,
 	`nome` VARCHAR(255),
 	`num_telefone` VARCHAR(255),     
-    `email` VARCHAR(255),
-    `data_nascimento` DATE,
-    `informacoes_extras` TEXT,
+        `email` VARCHAR(255),
+        `data_nascimento` DATE,
+        `informacoes_extras` TEXT,
 	PRIMARY KEY (`id`)
 ) ENGINE = InnoDB;
