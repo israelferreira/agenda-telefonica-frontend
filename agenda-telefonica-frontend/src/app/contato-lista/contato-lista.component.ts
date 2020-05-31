@@ -1,8 +1,7 @@
-import { ContatoDetalhesComponent } from './../contato-detalhes/contato-detalhes.component';
-import { Observable } from "rxjs";
+import { Observable } from 'rxjs';
 import { ContatoService } from '../contato.service';
 import { Contato } from '../contato';
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({

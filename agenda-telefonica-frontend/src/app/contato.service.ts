@@ -15,11 +15,11 @@ export class ContatoService {
     return this.http.get(`${this.baseUrl}/${id}`);
   }
 
-  criarContato(contato: Object): Observable<Object> {
+  criarContato(contato: object): Observable<object> {
     return this.http.post(`${this.baseUrl}`, contato);
   }
 
-  atualizarContato(id: number, value: any): Observable<Object> {
+  atualizarContato(id: number, value: any): Observable<object> {
     return this.http.put(`${this.baseUrl}/${id}`, value);
   }
 

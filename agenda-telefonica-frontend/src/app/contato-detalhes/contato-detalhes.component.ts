@@ -1,7 +1,6 @@
 import { Contato } from '../contato';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ContatoService } from '../contato.service';
-import { ContatoListaComponent } from '../contato-lista/contato-lista.component';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -20,7 +19,7 @@ export class ContatoDetalhesComponent implements OnInit {
   ngOnInit() {
     this.contato = new Contato();
 
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params.id;
 
     this.contatoService.getContato(this.id)
       .subscribe(data => {

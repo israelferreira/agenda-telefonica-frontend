@@ -11,6 +11,7 @@ import { ContatoService } from '../contato.service';
 export class AtualizarContatoComponent implements OnInit {
   id: number;
   contato: Contato;
+  enviado: boolean;
   mascaraTelefone = ['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
 
   constructor(private route: ActivatedRoute, private router: Router,
@@ -19,7 +20,7 @@ export class AtualizarContatoComponent implements OnInit {
   ngOnInit() {
     this.contato = new Contato();
 
-    this.id = this.route.snapshot.params['id'];
+    this.id = this.route.snapshot.params.id;
 
     this.contatoService.getContato(this.id)
       .subscribe(data => {
