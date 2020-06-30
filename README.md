@@ -1,5 +1,5 @@
 # agenda-telefonica
-## Esse é um projeto de uma Agenda Telefônica desenvolvido com a arquitetura REST. No front-end foi usado o Angular 9. No back-end: Java EE 8 com EJB3, RESTEasy (JAX-RS), Hibernate/JPA e o gerenciador de dependências Maven. O banco de dados é o MySQL 8.
+## Esse é um projeto de uma Agenda Telefônica desenvolvido com a arquitetura REST. No front-end foi usado o Angular 10. No back-end: Java EE 8 com EJB3, RESTEasy (JAX-RS), Hibernate/JPA e o gerenciador de dependências Maven. O banco de dados é o MySQL 8.
 
 ## Screenshots:
 **Adicionando um contato**
