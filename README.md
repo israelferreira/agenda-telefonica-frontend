@@ -9,15 +9,6 @@
 **Detalhes do contato**
 ![Detalhes do contato](https://user-images.githubusercontent.com/37079133/72674765-76ed8780-3a59-11ea-95e2-5c45690cbfc5.PNG)
 
-## URLs:
-|  URL |  Método | Descrição |
-|----------|--------------|--------------|
-|`http://localhost:8080/agenda-telefonica-backend/api/contato`                                 | GET | Retorna todos os contatos salvos no banco de dados |
-|`http://localhost:8080/agenda-telefonica-backend/api/contato`                                 | POST | Salva um contato no banco de dados |
-|`http://localhost:8080/agenda-telefonica-backend/api/contato/{id}`                              | GET | Retorna o contato com o ID do parâmetro da URL |
-|`http://localhost:8080/agenda-telefonica-backend/api/contato/{id}`                              | DELETE | Deleta o registro do contato com o ID do parâmetro da URL |
-|`http://localhost:8080/agenda-telefonica-backend/api/contato/{id}`                              | PUT | Atualiza o registro do contato com o ID numérico do parâmetro da URL|
-
 ### Para o projeto funcionar:
 O back-end foi desenvolvido para funcionar no servidor de aplicações WildFly 17, então algumas configurações extras são necessárias.
 Na pasta do WildFly, ir até modules\layers\base\com e criar uma pasta chamada mysql, depois outra com o nome main.
@@ -68,4 +59,5 @@ Dentro da tag drivers, adicione o seguinte texto:
 
 O script para criar o banco de dados está no arquivo "agenda-telefonica (MySQL8 Database).sql".
 
-Após esses passos, o backend do projeto deve ser executado no servidor WildFly. Para o frontend funcionar, é necessário navegar até a pasta "agenda-telefonica-frontend" usando o Prompt de Comandos do Node.js e usar o comando "ng serve". A URL é: http://localhost:4200/.
+Após esses passos, o backend do projeto deve ser executado no servidor WildFly.
+Para o frontend funcionar, é necessário navegar até a pasta "agenda-telefonica-frontend" usando o Prompt de Comandos do Node.js, baixar as dependências com o comando "npm install" e depois usar o comando "ng serve". A URL que deve ser acessada no navegador é: http://localhost:4200/.

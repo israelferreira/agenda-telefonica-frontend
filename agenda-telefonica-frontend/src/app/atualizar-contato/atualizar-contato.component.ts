@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-
 import { Contato } from '../contato';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ContatoService } from '../contato.service';
-
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-atualizar-contato',
@@ -12,12 +9,10 @@ import { Observable } from 'rxjs';
   styleUrls: ['./atualizar-contato.component.css']
 })
 export class AtualizarContatoComponent implements OnInit {
-
   id: number;
   contato: Contato;
   enviado: boolean;
   mascaraTelefone = ['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
-  contatos: Observable<Contato[]>;
 
   constructor(private route: ActivatedRoute, private router: Router,
               private contatoService: ContatoService) { }
@@ -36,7 +31,6 @@ export class AtualizarContatoComponent implements OnInit {
   atualizarContato() {
     this.contatoService.atualizarContato(this.id, this.contato).subscribe();
     this.contato = new Contato();
-    this.contatos = this.contatoService.getListaContatos();
     this.gotoList();
   }
 

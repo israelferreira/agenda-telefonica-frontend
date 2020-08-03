@@ -11,7 +11,6 @@ const routes: Routes = [
   { path: 'adicionar', component: CriarContatoComponent },
   { path: 'atualizar/:id', component: AtualizarContatoComponent },
   { path: 'detalhes/:id', component: ContatoDetalhesComponent },
-  { path: '**', redirectTo: 'contatos' }
 ];
 
 @NgModule({
