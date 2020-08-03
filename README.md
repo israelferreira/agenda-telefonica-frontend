@@ -66,4 +66,6 @@ Dentro da tag drivers, adicione o seguinte texto:
 </driver>
 ```
 
-Após esses passos, o projeto deverá funcionar normalmente.
+O script para criar o banco de dados está no arquivo "agenda-telefonica (MySQL8 Database).sql".
+
+Após esses passos, o backend do projeto deve ser executado no servidor WildFly. Para o frontend funcionar, é necessário navegar até a pasta "agenda-telefonica-frontend" usando o Prompt de Comandos do Node.js e usar o comando "ng serve". A URL é: http://localhost:4200/.
