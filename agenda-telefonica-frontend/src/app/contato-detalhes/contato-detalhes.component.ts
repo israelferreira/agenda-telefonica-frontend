@@ -1,7 +1,9 @@
-import { Contato } from '../contato';
+
 import { Component, OnInit } from '@angular/core';
-import { ContatoService } from '../contato.service';
 import { Router, ActivatedRoute } from '@angular/router';
+
+import { Contato } from '../contato';
+import { ContatoService } from '../contato.service';
 
 @Component({
   selector: 'app-contato-detalhes',
@@ -27,7 +29,7 @@ export class ContatoDetalhesComponent implements OnInit {
       }, error => console.log(error));
   }
 
-  list(){
+  list() {
     this.router.navigate(['contatos']);
   }
 }

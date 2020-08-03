@@ -22,6 +22,8 @@ speed-measure-plugin.json
 *.launch
 .settings/
 *.sublime-workspace
+.editorconfig
+.browserslistrc
 
 # IDE - VSCode
 .vscode/*
@@ -44,3 +46,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# e2e
+/e2e/*.js
+/e2e/*.map
