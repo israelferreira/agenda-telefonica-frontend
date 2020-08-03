@@ -1,14 +1,20 @@
 <h3>Criar Contato</h3>
 <div [hidden]="enviado" style="width: 400px;">
-  <form (ngSubmit)="onSubmit()">
+  <form (ngSubmit)="onSubmit()" #form="ngForm">
     <div class="form-group">
       <label for="nome">Nome</label>
-      <input type="text" class="form-control" id="nome" [(ngModel)]="contato.nome" name="nome">
+      <input type="text" class="form-control" id="nome" [(ngModel)]="contato.nome"
+        name="nome" #nome="ngModel" required minlength="2">
+    </div>
+
+    <div *ngIf="nome.invalid && (nome.dirty || nome.touched)" class="alert alert-danger">
+      <div *ngIf="nome.errors.required">O nome é obrigarório.</div>
+      <div *ngIf="nome.errors.minlength">O nome precisa ter no mínimo 2 caracteres.</div>
     </div>
 
     <div class="form-group">
       <label for="telefone">Telefone</label>
-      <input type="text" [textMask]="{mask: mascaraTelefone}" class="form-control" placeholder="(61) 99123-4567" [(ngModel)]="contato.telefone" name="telefone">      
+      <input type="text" [textMask]="{mask: mascaraTelefone}" class="form-control" placeholder="(61) 99123-4567" [(ngModel)]="contato.telefone" name="telefone">
     </div>
 
     <div class="form-group">
@@ -24,9 +30,9 @@
     <div class="form-group">
       <label for="informacoesExtras">Informações Extras</label>
       <textarea class="form-control" rows="5" cols="10" maxlength="500"
-        id="informacoesExtras" required [(ngModel)]="contato.informacoesExtras" name="informacoesExtras"></textarea>
+        id="informacoesExtras" [(ngModel)]="contato.informacoesExtras" name="informacoesExtras"></textarea>
     </div>
 
-    <button type="submit" class="btn btn-success">Enviar</button>
+    <button type="submit" class="btn btn-success" [disabled]="form.invalid">Enviar</button>
   </form>
 </div>

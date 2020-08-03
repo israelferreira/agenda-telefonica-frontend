@@ -1,8 +1,10 @@
-import { Observable } from 'rxjs';
-import { ContatoService } from '../contato.service';
-import { Contato } from '../contato';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { ContatoService } from '../contato.service';
+import { Contato } from '../contato';
+
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-contato-lista',
@@ -37,6 +39,7 @@ export class ContatoListaComponent implements OnInit {
   }
 
   atualizarContato(id: number) {
+    this.reloadData();
     this.router.navigate(['atualizar', id]);
   }
 }

@@ -1,7 +1,10 @@
-import { ContatoService } from '../contato.service';
-import { Contato } from '../contato';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { ContatoService } from '../contato.service';
+import { Contato } from '../contato';
+
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-criar-contato',
@@ -13,6 +16,7 @@ export class CriarContatoComponent implements OnInit {
   contato: Contato = new Contato();
   enviado = false;
   mascaraTelefone = ['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+  contatos: Observable<Contato[]>;
 
   constructor(private contatoService: ContatoService,
               private router: Router) { }
@@ -28,6 +32,7 @@ export class CriarContatoComponent implements OnInit {
   salvar() {
     this.contatoService.criarContato(this.contato).subscribe();
     this.contato = new Contato();
+    this.contatos = this.contatoService.getListaContatos();
     this.gotoList();
   }
 
