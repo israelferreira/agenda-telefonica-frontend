@@ -3,4 +3,5 @@
 *.project
 *.classpath
 target/
+/target
 .target
