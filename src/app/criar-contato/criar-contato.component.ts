@@ -15,7 +15,7 @@ export class CriarContatoComponent implements OnInit {
 
   contato: Contato = new Contato();
   enviado = false;
-  mascaraTelefone = ['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+  mascaraTelefone = '(00) 00000-0000';
   contatos: Observable<Contato[]>;
 
   constructor(private contatoService: ContatoService,

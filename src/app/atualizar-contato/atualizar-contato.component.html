@@ -14,7 +14,8 @@
 
     <div class="form-group">
       <label for="telefone">Telefone</label>
-      <input type="text" [textMask]="{mask: mascaraTelefone}" class="form-control" placeholder="(61) 99123-4567" [(ngModel)]="contato.telefone" name="telefone">
+      <input type="text" mask="{{ mascaraTelefone }}" [dropSpecialCharacters]="false" class="form-control"
+        placeholder="(61) 99123-4567" [(ngModel)]="contato.telefone" name="telefone">
     </div>
 
     <div class="form-group">

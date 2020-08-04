@@ -16,7 +16,7 @@ export class AtualizarContatoComponent implements OnInit {
   id: number;
   contato: Contato;
   enviado: boolean;
-  mascaraTelefone = ['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+  mascaraTelefone = '(00) 00000-0000';
   contatos: Observable<Contato[]>;
 
   constructor(private route: ActivatedRoute, private router: Router,
